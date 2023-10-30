@@ -35,9 +35,8 @@
         app:barrierDirection="start"
         app:constraint_referenced_ids="deleteImageView,editImageView"
 
-
-
         />
+
     <View
         android:id="@+id/line"
         android:layout_width="match_parent"

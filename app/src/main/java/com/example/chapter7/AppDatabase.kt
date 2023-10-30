@@ -12,7 +12,7 @@ abstract class AppDatabase : RoomDatabase() {
 
     companion object {
         private var INSTANCE: AppDatabase? = null
-        fun getInstance(context: Context): AppDatabase? {
+        fun getInstance(context: Context): AppDatabase? { // 싱글톤 디자인을 쓰겠다는 의미
             if(INSTANCE == null) { // INSTANCE 가 null 이면 초기화
                 synchronized(AppDatabase::class.java) { //AppDatabase 가 여러개 생기지 않게 하기 위해
                     INSTANCE = Room.databaseBuilder(

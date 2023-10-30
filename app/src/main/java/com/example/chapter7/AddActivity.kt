@@ -15,9 +15,6 @@ class AddActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initViews()
-        binding.addButton.setOnClickListener {
-            add()v
-        }
     }
 
     private fun initViews() {
@@ -36,7 +33,6 @@ class AddActivity : AppCompatActivity() {
             setText(text)
             isCheckable = true
             isClickable = true
-
         }
     }
 
@@ -49,7 +45,7 @@ class AddActivity : AppCompatActivity() {
         Thread {
             AppDatabase.getInstance(this)?.wordDao()?.insert(word)
             runOnUiThread {
-                Toast.makeText(this,"저장을 완료했습니다.",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show()
             }
             finish() //AddActivity 종료
         }.start()

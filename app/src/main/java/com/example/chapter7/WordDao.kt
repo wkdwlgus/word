@@ -2,7 +2,7 @@ package com.example.chapter7
 
 import androidx.room.*
 
-//쿼리 인터페이스 구현
+//쿼리 인터페이스
 
 @Dao
 interface WordDao {
@@ -20,6 +20,5 @@ interface WordDao {
 
     @Update
     fun update(word: Word)
-
 
 }
